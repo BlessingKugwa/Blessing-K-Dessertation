@@ -2,3 +2,5 @@ venv/
 .venv/
 *.db
 __pycache__/
+*.pkl
+outputs/
