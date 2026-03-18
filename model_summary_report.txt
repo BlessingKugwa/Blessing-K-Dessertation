@@ -1,0 +1,39 @@
+OPERATIONAL RISK MODEL — SUMMARY REPORT
+============================================================
+
+DATA
+  Total records     : 2147
+  Features used     : 17
+  Date range        : 2022-01-01 to 2023-12-31
+
+ANOMALY DETECTION (Isolation Forest + Z-score)
+  Isolation Forest flags : 108  (5.0%)
+  Z-score flags (>2.5σ)  : 26
+  Combined anomalies     : 130  (6.1%)
+
+LOSS REGRESSION (Random Forest)
+  MAE              : $19.90
+  RMSE             : $28.52
+  R²               : 0.8608
+  CV R² (5-fold)   : 0.8544 ± 0.0119
+  Top feature      : LOSS_PER_FREQ (0.4175)
+
+RISK CLASSIFICATION (Random Forest)
+  F1 macro         : 0.3625
+  CV F1 (5-fold)   : 0.3400 ± 0.0099
+  Top feature      : SEV_OPVAR_RATIO (0.0970)
+
+ALERT TIERS
+  MEDIUM    : 1068
+  LOW       : 764
+  HIGH      : 309
+  CRITICAL  : 6
+
+SAVED FILES
+  anomaly_isolation_forest.pkl
+  loss_regression_rf.pkl
+  risk_classifier_rf.pkl
+  feature_scaler.pkl
+  label_encoders.pkl
+  scored_risk_data.csv
+============================================================
