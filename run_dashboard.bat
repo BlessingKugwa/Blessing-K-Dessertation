@@ -1,0 +1,9 @@
+@echo off
+cd /d "%~dp0"
+if exist venv call venv\Scripts\activate.bat
+echo Starting Operational Risk Dashboard...
+echo Kill old processes...
+taskkill /f /im python.exe 2>nul
+timeout /t 2 /nobreak >nul
+streamlit run dashboard.py --server.port 8501 --server.headless false
+pause
