@@ -25,7 +25,7 @@ print(f"\n[Data] Loaded {len(df)} records, {df.shape[1]} columns")
 print(f"[Data] Columns: {list(df.columns)}")
 print(f"[Data] Missing values:\n{df.isnull().sum()}")
 
-# LOSS AMOUNT STATISTICS
+## LOSS AMOUNT STATISTICS
 
 loss_col = 'LOSS AMOUNT(USD)' 
 
